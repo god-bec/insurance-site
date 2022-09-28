@@ -15,12 +15,12 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
 const comments = [
     {
         id: 1,
-        content: "sureHealth has really lived up to its name. It's an absolutely reliable organization which has an incredible health plan with contact persons always on hand 24/7 to handle requests and emergencies.It's an absolutely reliable organization which has an incredible health plan with contact persons always on hand 24/7 to handle requests and emergencies.It's an absolutely reliable organization which has an incredible health plan with contact persons always on hand 24/7 to handle requests and emergencies.",
-        name: "Chukwu Elizabeth (head of happines bank)"
+        content: "sureHealth in this hospital is known to be one of the best hmo that is well organised and provides prompt services. They are good with case follow up and pay their bills promptly. payment can easily be tracked from the portal which translates to ease in reconciliation.",
+        name: "Chukwu Elizabeth (head of WHO)"
     },
     {
         id: 2,
-        content: "sureHealth has really lived up to its name. It's an absolutely reliable organization which has an incredible health plan with contact persons always on hand 24/7 to handle requests and emergencies.",
+        content: "Our relationship with sureHealth has so far been productive and we know them to be proactive in making sure our staff readily access healthcare services.",
         name: "Chukwu Elizabeth (head of happines bank)"
     },
     {
@@ -51,17 +51,17 @@ const comments = [
     {
         id: 8,
         content: "sureHealth has really lived up to its name. It's an absolutely reliable organization which has an incredible health plan with contact persons always on hand 24/7 to handle requests and emergencies.sureHealth has really lived up to its name. It's an absolutely reliable organization which has an incredible health plan with contact persons always on hand 24/7 to handle requests and emergencies.sureHealth has really lived up to its name. It's an absolutely reliable organization which has an incredible health plan with contact persons always on hand 24/7 to handle requests and emergencies",
-        name: "Chukwu Elizabeth (head of happines bank)"
+        name: "Adewale yusuf"
     },
     {
         id: 9,
         content: "sureHealth has really lived up to its name. It's an absolutely reliable organization which has an incredible health plan with contact persons always on hand 24/7 to handle requests and emergencies.",
-        name: " Elizabeth (CEO becWorld)"
+        name: " Olorundre ponmile(CEO peckfos)"
     },
     {
         id: 10,
-        content: "sureHealth has really lived up to its name. It's an absolutely reliable organization which has an incredible health plan with contact persons always on hand 24/7 to handle requests and emergencies.sureHealth has really lived up to its name. It's an absolutely reliable organization which has an incredible health plan with contact persons always on hand 24/7 to handle requests and emergencies",
-        name: "Chukwu Elizabeth (head of happines bank)"
+        content: "Our relationship with sureHealth  has so far been productive and we know them to be proactive in making sure our staff readily access healthcare services. We find them to be administratively responsive, customer services oriented and instituting innovations to their services to our organisation",
+        name: "Daniel Ayscough (Head, Human Resources, Jagal)"
     },
 ]
 export const About = () => {

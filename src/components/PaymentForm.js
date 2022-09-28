@@ -1,6 +1,8 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js"
 import axios from "axios"
 import React, { useState } from 'react'
+import { About } from "./about/About"
+import { Plan } from "./plan/Plan"
 import './Stylepay.css'
 
 
@@ -73,11 +75,14 @@ export default function PaymentForm() {
                         </fieldset>
                         <button>Pay</button>
                     </form>
+                    
                     :
                     <div>
                         <h2>You just made the best choice today, thank you for choosing us</h2>
                     </div>
                 }
+                <About/>
+                <Plan/>
             </div>
         </>
     )
