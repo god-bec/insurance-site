@@ -2,7 +2,6 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js"
 import axios from "axios"
 import React, { useState } from 'react'
 import { About } from "./about/About"
-import { Plan } from "./plan/Plan"
 import './Stylepay.css'
 
 
