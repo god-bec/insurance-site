@@ -4,6 +4,8 @@ import { Button } from '@material-ui/core'
 import { About } from '../about/About'
 import './Details.css'
 import { bookplan } from './Bookplan'
+import { Work } from '../works/Work'
+
 
 export const Details = () => {
     return (
@@ -28,6 +30,12 @@ export const Details = () => {
                     <Button variant="contained" color="primary" size="large">Buy now</Button>
                 </Link>
             </div>
+
+
+<Work />
+
+
+
 
 
             <div className='details-container'>
@@ -71,7 +79,7 @@ export const Details = () => {
                 }
             </div>
 
-            <About />
+            <About className="abt-component" />
         </div>
     )
 }
