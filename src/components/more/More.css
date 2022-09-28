@@ -1,0 +1,103 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.more{
+    background-color: azure;
+}
+.more-intro {
+    text-align: center;
+    line-height: 60px;
+    padding: 40px 0px;
+}
+.more-intro h1{
+    color:navy;
+    font-size: 45px;
+}
+.more-intro p{
+    color:deeppink;
+    font-size: 20px;
+}
+.more-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 140px 0px;
+    
+}
+.more-details h3{
+    color:navy;
+    font-size: 45px;
+}
+.more-details {
+    line-height: 50px;
+    text-align: center;
+    padding: 70px 20px;
+}
+.more-details p{
+    color:dimgrey;
+    font-size: 20px;
+}
+.more-image img{
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+}
+.more-link,.more-link:active{
+text-decoration: none;
+color: azure;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .more-intro {
+        padding: 30px 20px;
+        line-height: 30px;
+    }
+    .more-intro h1{
+        font-size: 25px;
+    }
+    .more-intro  p{
+        color:deeppink;
+        line-height: 18px;
+        font-size: 14px;
+        padding: 20px 0px;
+    }
+    .more-details {
+        line-height: 20px;
+        text-align: center;
+        padding: 10px 20px;
+    }
+    .more-content{
+        flex-direction: column;
+        padding: 100px 0px 10px 0px;
+        
+    }
+    .more-image img{
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+    }
+    .more-details h3{
+        color:navy;
+        font-size: 18px;
+    }
+    .more-link,.more-link:active{
+        text-decoration: none;
+        color: azure;
+        
+        }
+}

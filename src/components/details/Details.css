@@ -1,0 +1,68 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.details{
+    background-color: azure;
+}
+.details-container{
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+}
+.details-content{
+    border: solid navy;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+}
+.details-content h3{
+    font-size: 30px;
+    color: navy;
+    border-bottom: 2px solid deeppink;
+}
+.amount{
+    display: flex;
+    justify-content: center;
+    color: navy;
+    width: 100%;
+    border-bottom: 2px solid deeppink;
+    padding: 10px 0px;
+}
+.amount h1{
+   font-size: 55px;
+}
+.amount h4{
+    font-size: 25px;
+    margin-top: 10px;
+ }
+ .form input{
+    width: 100%;
+    padding: 10px 10px;
+  
+ }
+ .form{
+    padding: 10px 0px;
+ }
+ .form Button{
+    width: 100%;
+ }
+ .details-writup p{
+    line-height: 50px;
+ }
+
+
+
+
+
+
+
+
+
+ @media only screen and (max-width: 600px) {
+    .details-container{
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+ }

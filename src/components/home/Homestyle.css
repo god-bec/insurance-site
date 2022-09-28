@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.services{
+    background-color: azure;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 20px;
+}
+.services-content{
+    width:50%;
+    padding-left: 80px;
+}
+.services-content h1{
+    color:navy;
+    font-size: 45px;
+}
+.services-content p{
+    color:deeppink;
+    width: 50%;
+    font-size: 16px;
+    margin: 10px 0px 20px 0px;
+}
+.service-img img{
+    margin-left: 50%;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .services-content{
+        width:90%;
+        padding-left: 10px;
+    } 
+    .services-content h1{
+        font-size: 30px;
+    }
+    .services-content p{
+        margin: 10px 0px 20px 0px;
+        width: 100%;
+        font-size: 14px;
+    }
+    .service-img img{
+        margin: auto;
+        display: block;
+        width: 300px;
+        height: 300px;
+        margin-top: 100px;
+    }
+    
+}
