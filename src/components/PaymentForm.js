@@ -82,7 +82,7 @@ export default function PaymentForm() {
                     </div>
                 }
                 <About/>
-                <Plan/>
+                
             </div>
         </>
     )
