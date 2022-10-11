@@ -3,89 +3,84 @@
     padding: 0px;
     box-sizing: border-box;
 }
-.plan-content img {
+.work{
+    background-color: azure;
+    padding: 70px 0px;
+}
+.work-content img {
     width: 250px;
     height:250px;
     border-radius: 100%;
 }
 .workplan-image{
     font-size: 70px;
-    color: navy;
+    /* color: blue; */
+    padding: 30px 0px;
 }
-.plan-content{
+.work-content{
     width: 30%;
     text-align: center;
     line-height: 25px;
-   
 }
-.plan{
-    background-color: azure;
-    padding: 150px 40px  80px 40px;
-}
-.plan-container{
+
+.work-container{
     display: flex;
     justify-content: space-between;
     font-family: 'Open Sans', sans-serif;
-    padding: 100px 0px 0px 0px;
+    padding: 40px 40px;
+    
 }
-.plan-content h3{
+.work-content h3{
     margin: 20px 0px;
     color: navy;
 }
 .plan-content p{
     color: dimgrey;
-    padding-bottom: 20px;
 }
-.plan-header h1{
+.work-header h1{
     text-align: center;
     font-size:45px;
-    /* width: 80%; */
-    color:navy;
-    /* margin: 100px 0px 0px 0px; */
+     color:navy;
+    
 }
-/* .plan-link{
-    color:navy;
-    text-decoration: none;
-}
-.plan-link:hover{
-    color:azure;
-} */
+
 
 @media only screen and (max-width: 600px) {
-    .plan-container{
+    .work-container{
         flex-direction: column;
         justify-content: center;
-        padding: 0px 0px 150px 0px;
+        padding: 0px 0px 50px 0px;
         margin-top: -10px;
       
     } 
-    .plan-content img {
+    .work-content img {
         width: 150px;
         height:150px;
         border-radius: 100%;
     }
-    .plan-content{
+    .work-content{
         width: 100%;
         text-align: center;
         line-height: 25px;
         padding: 0px 0px;
         margin-top: 80px;
+
       
     }
 
-    .plan-content p{
+    .work-content p{
        font-size: 14px;
        color: dimgray;
     }
-    .plan-header h1{
+    .work-header h1{
         font-size:23px;
-        width: 70%;
+        width: 80%;
        margin: auto;
        
     }
-    .plan{
+    .work{
         background-color: azure;
-        padding: 150px 40px  0px 40px;
+        padding: 50px 40px  0px 40px;
     }
     
   }

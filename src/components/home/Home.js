@@ -5,6 +5,9 @@ import famImg from '../assets/img1.jpg'
 import { Plan } from '../plan/Plan'
 import { About } from '../about/About'
 import { Link } from 'react-scroll'
+import { healthplans } from './Data'
+
+
 
 export const Home = () => {
   return (
@@ -37,7 +40,8 @@ export const Home = () => {
           <img src={famImg} alt="famimage"/>
         </div>
       </div>
-      <Plan />
+      <Plan title="We have plans for everyone" healthplans={healthplans} />
+      
       <About/>
     </div>
   )

@@ -22,15 +22,16 @@
     display: flex;
     justify-content: space-between;
     font-family: 'Open Sans', sans-serif;
-    padding: 100px 0px 0px 0px;
+    padding:50px 0px;
 }
 .plan-content h3{
-    margin: 20px 0px;
-    color: navy;
+  color: navy;
+  padding: 20px 0px;
 }
 .plan-content p{
     color: dimgrey;
-    padding-bottom: 20px;
+    padding: 20px 0px;
+    
 }
 .plan-header h1{
     text-align: center;
@@ -39,13 +40,50 @@
     color:navy;
     /* margin: 100px 0px 0px 0px; */
 }
-/* .plan-link{
+.button-container{
+    padding: 0px 20px;
+}
+.button{
+    width:100%;
+    padding: 18px 10px;
+    font-size: 20px;
+    border-radius: 6px;
+    border:2px  solid navy;
     color:navy;
+    cursor: pointer;
+    background: transparent;
+    transition: .2s ease-in-out;
+}
+.button:hover{
+    width:100%;
+    padding: 18px 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border:2px  solid azure;
+    color:azure;
+    background-color: navy;
+    cursor: pointer;
+}
+Link{
     text-decoration: none;
 }
-.plan-link:hover{
-    color:azure;
-} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 600px) {
     .plan-container{

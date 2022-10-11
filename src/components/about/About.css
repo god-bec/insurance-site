@@ -13,14 +13,12 @@
     text-align: center;
     background-color: azure;
     font-family: 'Open Sans', sans-serif;
-    padding: 80px 0px;
 }
 
 .comment-content{
     width: 80%;
     margin: auto;
     display:block;
-    margin-top:60px;
     text-align: center;
 }
 .comment-content p{

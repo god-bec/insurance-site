@@ -1,19 +1,21 @@
 import React from 'react'
 import './Work.css'
-import { workplan } from './workplan.js'
-// import { Link } from 'react-router-dom'
 
 
 
 
 
-export const Work = () => {
+
+
+export const Work = (props) => {
+           const workplan = props.workplan
+
     return (
-        <div className='plan' id="healthplan" >
-            <div className='plan-header'>
-          <h1 >Plan and Planning</h1>
+        <div className='work' id="healthplan" >
+            <div className='work-header'>
+          <h1 >{props.title}</h1>
            </div>
-            <div className="plan-container">
+            <div className="work-container">
             {
                 workplan.map((plan) => {
                     return (
@@ -22,7 +24,7 @@ export const Work = () => {
                         <h3>{plan.header}</h3>
                         <p>{plan.text}</p>
                      
-                            {/* <Link to={'/plan'}> <button className='button'>{plan.button}  </button></Link> */}
+              
                        
 
                     </div>
