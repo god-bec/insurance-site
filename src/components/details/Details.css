@@ -54,8 +54,14 @@
 .abt-component{
     border: solid black;
 }
+.details-link{
+    text-decoration: none;
+}
 
-
+.details-cont h1{
+    text-align: center;
+    font-size: 45px;
+}
 
 
 

@@ -2,7 +2,7 @@ import React from 'react'
 // import { useParams } from 'react-router-dom'
 // import {healthplans} from '../plan/Data.js'
 import { Button } from '@material-ui/core'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-scroll'
 import './Intro.css'
 
 
@@ -17,7 +17,7 @@ export const Intro = (props) => {
                 <h1>{props.heading}</h1>
                 <p>{props.text}</p>
                 <Link
-                    to="/"
+                    to={props.link}
                     className='more-link'
                     spy={true}
                     smooth={true}

@@ -5,6 +5,7 @@
 }
 .more{
     background-color: azure;
+    padding-top: 60px;
 }
 .more-intro {
     text-align: center;
@@ -63,6 +64,9 @@ color: azure;
 
 
 @media only screen and (max-width: 600px) {
+   .more{
+    padding: 100px 0px 0px 0px;
+   }
     .more-intro {
         padding: 30px 20px;
         line-height: 30px;

@@ -7,6 +7,8 @@ import { Details } from "./components/details/Details";
 import StripeContainer from "./components/StripeContainer";
 import { About } from "./components/about/About";
 import { Family } from "./components/family/Family";
+import { Buyplan } from "./components/buyplan/Buyplan";
+import { Proceedbuy } from "./components/proceedbuy/Proceedbuy";
 // import { Plan } from "./components/plan/Plan";
 
 function App() {
@@ -20,6 +22,9 @@ function App() {
           <Route path="details" element={<Details/>} />
           <Route path="pay" element={<StripeContainer/>} />
           <Route path="about" element={<About/>} />
+          <Route path="/family/:id/buyplan" element={<Buyplan/>}>
+             <Route path=":id" element={<Proceedbuy/>}/>
+          </Route>
         </Routes>
         <Footer />
       </BrowserRouter>

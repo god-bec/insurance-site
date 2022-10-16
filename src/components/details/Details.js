@@ -5,40 +5,26 @@ import { About } from '../about/About'
 import './Details.css'
 import { bookplan } from './Bookplan'
 import { Work } from '../works/Work'
+import { Intro } from '../intro/Intro'
+import {workplan} from './Workplan'
 
 
 export const Details = () => {
     return (
 
         <div className='details'  >
-            <div className='more-intro'>
-                <h1>Affordable Health Insurance For Corporates & SMEs</h1>
-                <p>Your employees will be happier and healthier on our health insurance plans</p>
-                <Link
-                    to='/plan'
-                    className='more-link'
-                    spy={true}
-                    smooth={true}
-                    hashSpy={true}
-                    offset={50}
-                    duration={500}
-                    delay={1000}
-                    isDynamic={true}
-                    ignoreCancelEvents={false}
-                    spyThrottle={500}
-                >
-                    <Button variant="contained" color="primary" size="large">Buy now</Button>
-                </Link>
-            </div>
-
-
-<Work />
+            <Intro heading='Affordable Health Insurance For Corporates & SMEs' text='Your employees will be happier and healthier on our health insurance plans' button="Buy now" link="buy"/>
+             <Work workplan={workplan} title="Plan & Pricing"/>
 
 
 
 
+         
+                
+         
 
-            <div className='details-container'>
+            <div className='details-container' id="buy">
+                
                 {
                     bookplan.map((plan) => {
                       return(
@@ -50,7 +36,7 @@ export const Details = () => {
                             </div>
                             <div className='form'>
                                 <input type='number' placeholder="howmany people do you want to buy for" /><br/> <br/>
-                                <Link to='/pay'>
+                                <Link to='/pay' className='details-link'>
                                 <Button variant="contained" color="primary" size="large">{plan.buy}</Button>
                                 </Link>
                               
@@ -78,6 +64,8 @@ export const Details = () => {
                     })
                 }
             </div>
+          
+           
 
             <About className="abt-component" />
         </div>
