@@ -22,7 +22,7 @@ export const Proceedbuy = () => {
                 return (
                     <div className='proceed'>
                             <h3>you will be buying this plan for {item.price}</h3>
-                           <Link to="/details" className='proceed-link'><Button variant="contained" color="primary" size="small">Proceed to buy plan</Button></Link> 
+                           <Link to="/cart" className='proceed-link'><Button variant="contained" color="primary" size="small">Proceed to buy plan</Button></Link> 
                     </div>
                 )
             })

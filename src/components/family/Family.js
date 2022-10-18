@@ -8,6 +8,7 @@ import { workplan } from './Workplan.js'
 import { useParams } from 'react-router-dom'
 import {  healthplans } from '../home/Data'
 import { Buyplan } from '../buyplan/Buyplan'
+// import { Proceedbuy } from '../proceedbuy/Proceedbuy'
 
 export const Family = () => {
     const { id } = useParams();
@@ -34,6 +35,7 @@ export const Family = () => {
       <About/>
       <Work title="How it works" workplan={workplan}/>
       <Buyplan id="buyplan"/>
+      {/* <Proceedbuy/> */}
     </div>
   )
 }

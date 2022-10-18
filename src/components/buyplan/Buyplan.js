@@ -8,19 +8,21 @@ import { Outlet } from 'react-router-dom';
 
 
 
+
 export const Buyplan = () => {
     //grabing input value so it can be used to serach array
     const [namesearch, setNamesearch] = useState("");
     //conditional rendering the serch items if input is clicked
     const [searchitem, setSearchitem] = useState(false);
     //conditional remove input if search item  is clicked
-    const [isclicked, setIsclicked] = useState(true)
+    // const [isclicked, setIsclicked] = useState(true)
     const hospitalList = useRef(null);
 
-    const clicked = () => {
-       setIsclicked(!isclicked)
-
-    }
+//     const clicked = () => {
+//        setIsclicked(!isclicked)
+//        hospitalList.current.
+//  console.log(!isclicked)
+//     }
 
     const handleChange = (e) => {
         setNamesearch(e.target.value);
@@ -46,11 +48,11 @@ export const Buyplan = () => {
                     Clicke <a href='#'>here</a> to view a comprehensive list of benefits for the pre-existing Condition Plan
                 </p>
                 <h2>Buy plan</h2>
-                {isclicked ? <form >
+            <form >
                            <label>Please select a hospital. Search by hospital name or location</label><br />
                                 <input type='text' id="search" placeholder='search' value={namesearch} onChange={handleChange} onClick={handleClick} ref={hospitalList} />
 
-                </form>: null}
+                </form>
                 {searchitem &&  <div className='hospital-list-container'>
                     {
 
@@ -68,13 +70,13 @@ export const Buyplan = () => {
                        
                                <ul className='hospital-list-ul' >
                              
-                                   <Link className="plan-link" to={`buyplan/${el.id}`} ><li key={el.id} onClick={clicked}>{el.name}</li></Link>
+                                   <Link className="plan-link" to={`buyplan/${el.id}`} ><li key={el.id} >{el.name}</li></Link>
                                    
                                 </ul> 
                                 
 
                             )
-
+                           
                         })
 
                     }

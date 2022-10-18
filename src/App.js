@@ -9,6 +9,7 @@ import { About } from "./components/about/About";
 import { Family } from "./components/family/Family";
 import { Buyplan } from "./components/buyplan/Buyplan";
 import { Proceedbuy } from "./components/proceedbuy/Proceedbuy";
+import Cart from "./components/cart/Cart";
 // import { Plan } from "./components/plan/Plan";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/family/:id/buyplan" element={<Buyplan/>}>
              <Route path=":id" element={<Proceedbuy/>}/>
           </Route>
+          <Route path="cart" element={<Cart/>} />
         </Routes>
         <Footer />
       </BrowserRouter>
