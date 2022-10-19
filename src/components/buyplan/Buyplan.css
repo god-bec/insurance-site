@@ -2,7 +2,8 @@
     background-color: azure;
     text-align: left;
     padding: 20px 40px;
-    font-weight: 0;
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
 }
 
 .Buyplan h3{

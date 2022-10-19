@@ -2,7 +2,7 @@ import React from 'react'
 // import { useParams } from 'react-router-dom'
 // import {healthplans} from '../plan/Data.js'
 import { Button } from '@material-ui/core'
-import { Link } from 'react-scroll'
+import { Link } from 'react-router-dom'
 import './Intro.css'
 
 

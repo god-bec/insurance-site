@@ -10,26 +10,33 @@ import { Family } from "./components/family/Family";
 import { Buyplan } from "./components/buyplan/Buyplan";
 import { Proceedbuy } from "./components/proceedbuy/Proceedbuy";
 import Cart from "./components/cart/Cart";
-// import { Plan } from "./components/plan/Plan";
+import { Data } from './components/data/Data.js'
+import {CartContextProvider} from './cartContex/CartContext.js'
+
 
 function App() {
+ 
+
+
   return (
     <div>
+      <CartContextProvider>
       <BrowserRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/family/:id" element={<Family/>} />
-          <Route path="details" element={<Details/>} />
-          <Route path="pay" element={<StripeContainer/>} />
-          <Route path="about" element={<About/>} />
-          <Route path="/family/:id/buyplan" element={<Buyplan/>}>
-             <Route path=":id" element={<Proceedbuy/>}/>
+          <Route path="/family/:id" element={<Family />} />
+          <Route path="details" element={<Details />} />
+          <Route path="pay" element={<StripeContainer />} />
+          <Route path="about" element={<About />} />
+          <Route path="/buyplan" element={<Buyplan data={Data} />}>
+            <Route path=":id" element={<Proceedbuy data={Data} />} />
           </Route>
-          <Route path="cart" element={<Cart/>} />
+          <Route path="cart" element={<Cart  />} />
         </Routes>
         <Footer />
       </BrowserRouter>
+      </CartContextProvider>
     </div>
   );
 
@@ -37,3 +44,22 @@ function App() {
 }
 
 export default App;
+
+
+
+
+ // const [cartitem, setcartitem] = useState([]);
+
+  // const onAdd = (el) => {
+  //   const exist = cartitem.find((item) => {
+  //    return item.id === el.id
+  //   })
+  //   if (exist) {
+  //     setcartitem(cartitem.map((item) => {
+  //      return item.id === el.id ? { ...exist, qty: exist.qty + 1 } : el
+  //     }));
+  //   }else{
+  //     setcartitem([...cartitem,{...el, qty:1}]);
+  //   }
+  //   console.log(cartitem)
+  // }

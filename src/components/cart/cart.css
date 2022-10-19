@@ -18,10 +18,12 @@
     color: black;
     font-weight: 0;
     padding: 20px 0px;
+    text-align: center;
 }
 .cart-amount{
     display: flex;
     justify-content: space-around;
+    text-align: center;
 }
 .cart-btn{
     width:200px;
@@ -80,5 +82,24 @@ line-height: 50px;
 .add-minus-div input{
     padding: 0px 10px;
     font-size: 30px;
-    width: 50px;
+    width: 70px;
+    text-align: center;
 }
+h4{
+    text-align: center;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .cart{
+        display: flex;
+       flex-direction: column-reverse;
+
+    }
+    .cart-amount h1,h2,h3{
+font-size: 20px;
+    }
+ }

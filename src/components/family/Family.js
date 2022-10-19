@@ -7,15 +7,14 @@ import { Work } from '../works/Work'
 import { workplan } from './Workplan.js'
 import { useParams } from 'react-router-dom'
 import {  healthplans } from '../home/Data'
-import { Buyplan } from '../buyplan/Buyplan'
-// import { Proceedbuy } from '../proceedbuy/Proceedbuy'
+
 
 export const Family = () => {
     const { id } = useParams();
   
   return (
     <div className='more'>
-      <Intro heading="Affordable Health Insurance For Individuals & Families" text="Pay zero naira everytime you need to see a primary care doctor" button="Buy now" link="buyplan"/>
+      <Intro heading="Affordable Health Insurance For Individuals & Families" text="Pay zero naira everytime you need to see a primary care doctor" button="Buy now" link="/buyplan"/>
       {
         healthplans.filter((plan)=>{
      
@@ -34,8 +33,7 @@ export const Family = () => {
       <Work title="Made especially for you and your family" workplan={Familyplan}/>
       <About/>
       <Work title="How it works" workplan={workplan}/>
-      <Buyplan id="buyplan"/>
-      {/* <Proceedbuy/> */}
+     
     </div>
   )
 }
