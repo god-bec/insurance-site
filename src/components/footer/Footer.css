@@ -59,8 +59,10 @@
         padding-bottom: 50px;
     }
     .foot-ul ul li:first-child{
-        font-size: 14px;
+        font-size: 24px;
         line-height: 20px;
+        text-align: left;
+       
     }
     .foot-ul ul li{
         line-height: 15px;
