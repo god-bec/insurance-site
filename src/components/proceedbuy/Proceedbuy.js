@@ -13,7 +13,10 @@ export const Proceedbuy = (props) => {
     const {id} = useParams(); 
       const {data}= props;
      const cart = useContext(CartContext)
-    const cartBasket = cart.cartitem.length
+    const cartBasket = cart.cartitem.reduce((sum,item)=>{
+                                return sum+item.qty;                          
+    },0)
+
 console.log(cartBasket)
 
 

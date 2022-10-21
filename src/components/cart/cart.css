@@ -3,21 +3,30 @@
     margin: 0px;
     box-sizing: border-box;
 }
+.main-cart{
+    text-align: center;
+    background-color: azure;
+   
+}
+.cart-header{
+    display: flex;
+    justify-content: space-around;
+  
+}
 .cart-container{
     background-color: azure;
-    padding: 50px 0px;
     font-family: 'Raleway', sans-serif;
     text-align: center;
+    padding: 5px 0px;
 }
 .cart{
     display: flex;
-    justify-content: space-around;
-   padding: 30px 0px;
+    justify-content: space-around; 
 }
 .cart h4{
     color: black;
     font-weight: 0;
-    padding: 20px 0px;
+    /* padding: 20px 0px; */
     text-align: center;
 }
 .cart-amount{
@@ -71,17 +80,17 @@ line-height: 50px;
 }
 .add-minus-div button{
     padding: 0px 10px;
-    font-size: 30px;
+    font-size: 20px;
 }
 .add-minus-div button:hover{
     padding: 0px 10px;
-    font-size: 30px;
+    font-size: 20px;
     background-color: darkblue;
     color:white
 }
 .add-minus-div input{
     padding: 0px 10px;
-    font-size: 30px;
+    font-size: 20px;
     width: 70px;
     text-align: center;
 }
