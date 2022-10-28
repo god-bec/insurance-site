@@ -1,46 +1,46 @@
-import React from 'react'
+import {React,useState} from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from '@material-ui/core'
-import { About } from '../about/About'
+
 import './Details.css'
 import { bookplan } from './Bookplan'
-import { Work } from '../works/Work'
-import { Intro } from '../intro/Intro'
-import {workplan} from './Workplan'
+
 
 
 export const Details = () => {
+const [isqty, setIsqty]  = useState();
+
+const handleChange = (e)=>{
+  setIsqty(e.target.value);
+}
+
+
     return (
 
-        <div className='details'  >
-            <Intro heading='Affordable Health Insurance For Corporates & SMEs' text='Your employees will be happier and healthier on our health insurance plans' button="Buy now" link="buy"/>
-             <Work workplan={workplan} title="Plan & Pricing"/>
-
-
-
-
-         
-                
-         
-
+        <div className='details'>
+            <div className='more-intro' >
+            <h1>Plan and Pricing</h1>
+             <p>Pay zero naira everytime you need to see a primary care doctor</p>
+            </div>
+                      
             <div className='details-container' id="buy">
                 
                 {
                     bookplan.map((plan) => {
                       return(
-                        <div className='details-content'>
+                        <div className='details-content' key={plan.id}>
                             <h3>{plan.name}</h3>
                             <div className='amount'>
                                 <h1>{plan.cost}</h1>
                                 <h4>{plan.person}</h4>
                             </div>
-                            <div className='form'>
-                                <input type='number' placeholder="howmany people do you want to buy for" /><br/> <br/>
-                                <Link to='/pay' className='details-link'>
+                            <form className='form'>
+                                <input type='number' placeholder="howmany people do you want to buy for"  value={isqty} onChange={handleChange}/><br/> <br/>
+                                <Link to='' className='details-link'>
                                 <Button variant="contained" color="primary" size="large">{plan.buy}</Button>
                                 </Link>
                               
-                            </div>
+                            </form>
                             <div className='details-writup'>
                                 <p>Combined medical cover of ₦1.2 Million per year
                                      {plan.cost}, limit for surgeries available per year*
@@ -67,7 +67,7 @@ export const Details = () => {
           
            
 
-            <About className="abt-component" />
+          
         </div>
     )
 }

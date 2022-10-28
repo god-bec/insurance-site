@@ -75,18 +75,18 @@ export const About = () => {
                     slidesPerView={1}
                     navigation
                     pagination={{ clickable: true }}
-                    scrollbar={{ draggable: true }}
+                    // scrollbar={{ draggable: true }}
                 >
                     {
                         comments.map((info) => {
                             return <SwiperSlide>
                                
-                                    {/* <h1><FaAngleLeft /></h1> */}
+                                    
                                     <div className='comment-content' key={info.id}>
                                         <p>{info.content}</p>
                                         <h3>{info.name}</h3>
                                     </div>
-                                    {/* <h1><FaAngleRight /></h1> */}
+                                  
                                     
                             </SwiperSlide>
                         })

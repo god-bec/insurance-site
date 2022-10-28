@@ -72,7 +72,7 @@ const price = item.price * item.qty;
             <div className='cart-total'>
             <h4>Sub quantity</h4>
                <h2>Total</h2>
-                <h1>Amount payable</h1>
+                <h2>Amount payable</h2>
                 <Link to="/buyplan"> <button  className='cart-btn back'>BACK</button></Link>
               </div>
     <div className='cart-total'>

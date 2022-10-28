@@ -42,7 +42,7 @@ export const workplan = [
 ]
 
 
-export const plan = [
+export const parentplan = [
     {
         id:1,
         image:<FaCcVisa/>,
@@ -63,6 +63,22 @@ export const plan = [
     },
     {
         id:3,
+        image:<FaCcStripe/>,
+        alt:"card",
+        header:'Start accessing care!',
+        text:'After paying, watch out for the series of emails you’ll get from your no. 1 HMO in Nigeria, explaining how to use your health plans to stay healthy.',
+        
+    },
+    {
+        id:4,
+        image:<FaCcStripe/>,
+        alt:"card",
+        header:'Start accessing care!',
+        text:'After paying, watch out for the series of emails you’ll get from your no. 1 HMO in Nigeria, explaining how to use your health plans to stay healthy.',
+        
+    },
+    {
+        id:4,
         image:<FaCcStripe/>,
         alt:"card",
         header:'Start accessing care!',
@@ -100,25 +116,7 @@ export const Familyplan = [
         text:'We increase your health benefits every quarter and we won’t increase the price. Read how our graduated benefits work.',
       
         
-    },
-    {
-       id:4,
-       image:<GrNetwork/>,
-       alt:"card",
-       header:'Best hospitals near you',
-       text:`We're partners with over 1,500 hospitals across Nigeria which means no matter where you are, you can get access to good quality healthcare. See our hospital list`,
-     
-       
-   },
-   {
-       id:5,
-       image:<GrNetwork/>,
-       alt:"card",
-       header:'Healthy you? Get paid',
-       text:`Bonus: If you stay healthy, we'll pay you back 20% of your annual payment. No questions asked!`,
-     
-       
-   }
+    }
 ]
 
 

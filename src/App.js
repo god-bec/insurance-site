@@ -3,7 +3,6 @@ import { Home } from "./components/home/Home";
 import { Footer } from "./components/footer/Footer";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import { Details } from "./components/details/Details";
 import StripeContainer from "./components/StripeContainer";
 import { About } from "./components/about/About";
 import { Family } from "./components/family/Family";
@@ -12,6 +11,7 @@ import { Proceedbuy } from "./components/proceedbuy/Proceedbuy";
 import Cart from "./components/cart/Cart";
 import { Data } from './components/data/Data.js'
 import {CartContextProvider} from './cartContex/CartContext.js'
+import { Parent } from "./components/parent/Parent";
 
 
 function App() {
@@ -20,13 +20,14 @@ function App() {
 
   return (
     <div>
+    
       <CartContextProvider>
       <BrowserRouter>
-        <Navbar />
+      <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/family/:id" element={<Family />} />
-          <Route path="details" element={<Details />} />
+          <Route path="/family" element={<Family />} />
+          <Route path="parent" element={<Parent/>}/>
           <Route path="pay" element={<StripeContainer />} />
           <Route path="about" element={<About />} />
           <Route path="/buyplan" element={<Buyplan data={Data} />}>
