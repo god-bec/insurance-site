@@ -6,16 +6,27 @@ import './App.css'
 import StripeContainer from "./components/StripeContainer";
 import { About } from "./components/about/About";
 import { Family } from "./components/family/Family";
-import { Buyplan } from "./components/buyplan/Buyplan";
-import { Proceedbuy } from "./components/proceedbuy/Proceedbuy";
+// import { Proceedbuy } from "./components/proceedbuy/Proceedbuy";
 import Cart from "./components/cart/Cart";
 import { Data } from './components/data/Data.js'
 import {CartContextProvider} from './cartContex/CartContext.js'
 import { Parent } from "./components/parent/Parent";
+import { Practice } from "./components/practise/Practice";
+import { Login } from "./components/login/Login";
+import { ScrollToTop } from "./components/ScrollToTop";
+// import { LoginInput } from "./components/LoginIntro/LoginInput";
+import { LoginPageC } from "./components/login/LoginPageC";
+import { LoginPageA } from "./components/login/LoginPageA";
+import { LoginPageB } from "./components/login/LoginPageB";
+import { Business } from "./components/business/Business";
+import { BusInput } from "./components/business/BusInput";
+
 
 
 function App() {
- 
+  // const findvalue = (thevalue)=>{
+  //    console.log(thevalue)
+  // }
 
 
   return (
@@ -23,19 +34,29 @@ function App() {
     
       <CartContextProvider>
       <BrowserRouter>
+      <ScrollToTop/>
       <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/family" element={<Family />} />
-          <Route path="parent" element={<Parent/>}/>
+            <Route path="parent" element={<Parent/>}> 
+          {/* <Route path=":id" element={<Proceedbuy data={Data}/>} /> */}
+          </Route>
+          <Route path="business" element={<Business/>}/>
+          <Route path="businessInput" element={<BusInput/>}/>
           <Route path="pay" element={<StripeContainer />} />
           <Route path="about" element={<About />} />
-          <Route path="/buyplan" element={<Buyplan data={Data} />}>
-            <Route path=":id" element={<Proceedbuy data={Data} />} />
-          </Route>
+         
           <Route path="cart" element={<Cart  />} />
+          <Route path="prac" element={<Practice />} />
+          <Route  path="login" element={<Login/>}/>
+          <Route path="loginC" element={<LoginPageC/>}/>
+          <Route path="loginA" element={<LoginPageA/>}/>
+          <Route path="loginB" element={<LoginPageB/>}/>
         </Routes>
-        <Footer />
+       
+        
+        <Footer/>
       </BrowserRouter>
       </CartContextProvider>
     </div>

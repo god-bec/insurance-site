@@ -4,7 +4,8 @@ import { Button } from '@material-ui/core';
 import './proceedbuy.css'
 import {CartContext} from '../../cartContex/CartContext';
 import { useContext } from 'react';
-
+import { HashLink } from 'react-router-hash-link';
+// import {AiOutlineShoppingCart} from 'react-icons/ai'
 
 
 
@@ -17,11 +18,8 @@ export const Proceedbuy = (props) => {
                                 return sum+item.qty;                          
     },0)
 
-console.log(cartBasket)
-
-
   return (
-    <div className='proceed-container'>
+    <div className='proceed-container' id="proceedtobuy">
         {
             data.filter((item)=>{
 
@@ -34,8 +32,7 @@ console.log(cartBasket)
                 return (
                     <div className='proceed'>
                             <h3 key={item.id}>you will be buying this plan for {item.price}</h3>
-                           <Button variant="contained" color="primary" size="small" onClick={()=>{cart.onAdd(item)}} >
-                            Proceed to buy plan</Button> 
+                          <HashLink to="#proceedtobuy"><Button variant="contained" color="primary" size="small" onClick={()=>{cart.onAdd(item)}} >Proceed to buy plan</Button> </HashLink> 
                          
                     </div>
                 )

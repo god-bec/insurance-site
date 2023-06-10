@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.FormBus{
+    text-align: center;
+    color: navy;
+}
+.busForm {
+    max-width: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+
+  }
+  .busForm label{
+    padding-top: 10px;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .partA{
+    width: 50%;
+    padding: 30px;
+  }
+  .busForm div input{
+    width: 100%;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: azure;
+   
+
+  }
+  .busForm div input:hover{
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 1px solid navy;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    transition: ease-in .2s ;
+   
+
+  }
+  .busForm div textarea{
+    width: 100%;
+    padding: 55px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: azure;
+   
+
+  }
+  .busForm div textarea:hover{
+    width: 100%;
+    padding: 60px;
+    text-align: center;
+    border-bottom: 1px solid navy;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    transition: ease-in .2s ;
+    
+
+  }
+  .busForm div select{
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: azure;
+  
+  }
+  .busForm div select:hover{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid navy;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    transition: ease-in .2s ;
+  }
+   #bus-submit  {
+    margin: auto;
+    display: block;
+    padding: 15px 50px;
+    color: navy;
+    font-size: 20px;
+    margin-top: 20px;
+    
+  
+}
+
+  

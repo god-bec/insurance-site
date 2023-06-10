@@ -5,6 +5,7 @@
 }
 .details{
     background-color: azure;
+    text-align: center;
 }
 .details-container{
     display: flex;
@@ -16,6 +17,13 @@
     border-radius: 5px;
     text-align: center;
     padding: 20px;
+}
+.det-intro{
+    text-align: center;
+    color:navy;
+}
+.det-intro h1{
+   font-size: 40px;
 }
 .details-content h3{
     font-size: 30px;
@@ -48,9 +56,9 @@
  .form Button{
     width: 100%;
  }
- .details-writup p{
-    line-height: 50px;
- }
+ /* .details-writup p{
+    
+ } */
 .abt-component{
     border: solid black;
 }

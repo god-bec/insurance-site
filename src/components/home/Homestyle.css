@@ -11,15 +11,20 @@
 .services-content{
     width:50%;
     padding-left: 80px;
+    /* border: solid black; */
+    margin-top: 100px;
+    text-align: left;
 }
 .services-content h1{
     color:navy;
     font-size: 45px;
 }
-.services-content p{
+.services-content h6{
     color:deeppink;
-    width: 50%;
+    width: 60%;
     font-size: 16px;
+    /* border: solid red; */
+    text-align: left;
     margin: 10px 0px 20px 0px;
 }
 .service-img img{

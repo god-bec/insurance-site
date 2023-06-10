@@ -3,9 +3,10 @@ import { Button } from '@material-ui/core'
 import './Homestyle.css'
 import famImg from '../assets/img1.jpg'
 import { Plan } from '../plan/Plan'
+import { healthplans } from '../data/Data'
 import { About } from '../about/About'
 import { Link } from 'react-scroll'
-import { healthplans } from './Data'
+
 
 
 
@@ -17,9 +18,9 @@ export const Home = () => {
           <h1>
             Health insurance plans for you, your family, and your employees
           </h1>
-          <p>
+          <h6>
             Sign up now to remove the worries about your employee’s or family’s health
-          </p>
+          </h6>
           <Link
           to="healthplan" 
           spy={true}
@@ -40,7 +41,7 @@ export const Home = () => {
           <img src={famImg} alt="famimage"/>
         </div>
       </div>
-      <Plan title="We have plans for everyone" healthplans={healthplans} />
+      <Plan title="We have plans for everyone" healthplans={healthplans}  />
       
       <About/>
     </div>

@@ -3,43 +3,108 @@ import { BiMenu} from 'react-icons/bi';
 import { IconButton, Button} from '@material-ui/core'
 import './style.css'
 import { useState } from 'react';
-import { Link} from 'react-scroll';
-import { useNavigate } from 'react-router-dom';
-// import { Link } from 'react-router-dom';
+import { BiChevronDown } from 'react-icons/bi';
+import {AiOutlineShoppingCart} from 'react-icons/ai'
+// import { Link} from 'react-scroll/modules';
+import { Link} from "react-router-dom";
+import {HashLink } from "react-router-hash-link"
+
 
 const menuitems = [
     {
-        id: '/plan',
+        id: 1,
         text: 'Our health plan',
-        // icon: <BiChevronDown />,
-        path: 'healthplan'
+        icon: <BiChevronDown />
     },
     {
         id: 2,
-        text: 'Contact',
-        // icon: <BiChevronDown />,
-        path: 'footer'
+        text: 'Support',
+        icon: <BiChevronDown />
     },
     {
         id: 3,
         text: 'Resources',
-        // icon: <BiChevronDown />,
-        path: 'footer'
-    },
-    {
-        id: 4,
-        text: 'Login',
+        icon: <BiChevronDown />,
         path: '/'
-    }
+    }    
 
 ]
 export const Navbar = () => {
+    //drop down burger for small screen
     const [dropdown, setDropdown] = useState(true);
-    const HandleClick = () => {
+    const HandleClick = (elId) => {
         setDropdown(!dropdown)
-
+       
     }
-    const navigate = useNavigate();
+  
+// const navigate = useNavigate()
+
+
+    //list dropdown event code
+    const [contactDropdown, setcontactDropdown] = useState(true);
+    const [listDropdown, setlistDropdown] = useState(true);
+    const [listDropdown3, setlistDropdown3] = useState(true);
+
+const drpdownHideWhenmouseEnter = (elId)=>{
+    if(elId === 2){
+        setcontactDropdown(false)
+        
+   }
+   if(elId === 3){
+    setlistDropdown(false)
+     
+}
+if(elId === 1){
+    setlistDropdown3(false)
+     
+}
+}
+
+const listMouseLeave = (elId)=>{
+    if(elId === 2){
+        setcontactDropdown(true);
+        
+   }
+   if(elId === 3){
+    setlistDropdown(true);
+     
+}
+if(elId === 1){
+    setlistDropdown3(true);
+     
+}
+}
+
+
+
+const drpdownHideWhenmouseLeave1 = ()=>{
+    setcontactDropdown(!contactDropdown);
+    setlistDropdown(true);
+    setlistDropdown3(true);
+
+
+}
+
+const drpdownHideWhenmouseLeave2 = ()=>{
+    setlistDropdown(!listDropdown);
+    setcontactDropdown(true);
+    setlistDropdown3(true);
+
+}
+
+
+const drpdownHideWhenmouseLeave3 = ()=>{
+    setlistDropdown3(!listDropdown3);
+    setcontactDropdown(true);
+    setlistDropdown(true);
+   
+
+}
+
+const [isin ,setisin] = useState(true)
+
+
+
     return (
         <div className='container'>
             <div className='menubar'>
@@ -53,43 +118,34 @@ export const Navbar = () => {
                     {
                         menuitems.map((item) => {
                             return (
-                                
-                                    
-                                        <Link
-                                            to={item.path} 
-                                            onClick={HandleClick}
-                                            spy={true}
-                                            smooth={true}
-                                            hashSpy={true}
-                                            offset={50}
-                                            duration={500}
-                                            delay={300}
-                                            isDynamic={true}
-                                            ignoreCancelEvents={false}
-                                            spyThrottle={500}
-                                        >
-                                            <li key={item.id}>{item.text}</li>
-                                        </Link>
-                                  
-                              
-
+                                   <li key={item.id}  onMouseEnter={()=>{drpdownHideWhenmouseEnter(item.id)}}>{item.text}{item.icon}</li>
                             )
                         })
                     }
-                    {/* <ul className='drp-ul'>
+                     
+                      
+                    <ul className={contactDropdown ? 'hide-drp-ul': 'drp-ul list-1'} onMouseLeave={drpdownHideWhenmouseLeave1}>
                         <li><h4>FAQ</h4></li>
                         <li>Call us: 09157795096</li>
                         <li>Whatsapp: 08148714389</li>
                         <li>Email: hellolizzy@gmail.com</li>
-                    </ul> */}
-                     <Link to='heathplan'>
-                     <Button variant="contained" color="primary" size="small" onClick={()=>{ navigate('/'); HandleClick()} }>Get started</Button>
-                     </Link>
+                    </ul>
+                    <ul className={listDropdown ? 'hide-drp-ul': 'drp-ul list-2'} onMouseLeave={drpdownHideWhenmouseLeave2}>
+                        <li>Your available hospitals</li>
+                        <li>Your benefit list</li>
+                        <li>Download your care app</li>
+                    </ul>
+                    <ul className={listDropdown3 ? 'hide-drp-ul': 'drp-ul list-3'} onMouseLeave={drpdownHideWhenmouseLeave3}>
+                        <li>For You and Your Family</li>
+                        <li>For Your Parents</li>
+                        <li>For Your Parents</li>
+                    </ul>
+                    <Link to="/login" ><li>Login</li></Link> 
                     
-                   
-                   
-
-                </ul>
+                     <HashLink smooth to="/#healthplan"><Button variant="contained" color="primary" size="small">Get started </Button></HashLink>
+                     
+                     <AiOutlineShoppingCart />
+                    </ul>
 
             </div>
 
@@ -99,3 +155,4 @@ export const Navbar = () => {
 
     )
 }
+

@@ -79,7 +79,7 @@ export const About = () => {
                 >
                     {
                         comments.map((info) => {
-                            return <SwiperSlide>
+                            return <SwiperSlide >
                                
                                     
                                     <div className='comment-content' key={info.id}>

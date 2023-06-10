@@ -23,10 +23,6 @@ export const Work = (props) => {
                         <div className='workplan-image'>{plan.image}</div>
                         <h3>{plan.header}</h3>
                         <p>{plan.text}</p>
-                     
-              
-                       
-
                     </div>
                     )
                 })

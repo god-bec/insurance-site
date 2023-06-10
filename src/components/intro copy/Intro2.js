@@ -3,13 +3,13 @@ import React from 'react'
 // import {healthplans} from '../plan/Data.js'
 import { Button } from '@material-ui/core'
 // import { Link as link1 } from 'react-router-dom'
-import { Link} from 'react-scroll'
-import './Intro.css'
+import { Link} from 'react-router-dom'
+import './Intro2.css'
 
 
 
 
-export const Intro = (props) => {
+export const Intro2 = (props) => {
     // const { id } = useParams();
 
     return (
