@@ -427,7 +427,7 @@ export const bookplan = [
         cost: '#400',
         buy:"Buy now",
         days:20,
-        num:3
+        
         
         
     },
@@ -440,7 +440,7 @@ export const bookplan = [
         cost: '#500',
         buy:"Buy now",
         days:30,
-        num:5
+       
        
     },
     {
@@ -452,7 +452,7 @@ export const bookplan = [
         cost: '#1000',
         buy:"Buy now",
         days:45,
-        num:5
+        
     }
 ]
 
@@ -467,7 +467,7 @@ export const anualplan = [
         cost: '#100,000',
         buy:"Buy now",
         days:20,
-        num:3
+      
         
         
     },
@@ -480,7 +480,7 @@ export const anualplan = [
         cost: '#300,000',
         buy:"Buy now",
         days:30,
-        num:5
+       
        
     },
     {
@@ -492,7 +492,7 @@ export const anualplan = [
         cost: '#500,000',
         buy:"Buy now",
         days:45,
-        num:5
+       
     }
 ]
 

@@ -9,7 +9,8 @@ import parentpic from '../assets/parents.jpg'
 import {Link} from 'react-router-dom'
 import { useState } from 'react'
 import { Button } from '@material-ui/core'
-// import { Buyplan } from '../buyplan/Buyplan'
+import { CartContext } from '../../cartContex/CartContext'
+import { useContext } from 'react'
 import {Data} from '../data/Data.js'
 
 // import { FcDisplay } from 'react-icons/fc'
@@ -40,9 +41,12 @@ export const Parent = () => {
 
 const Search = Data.filter((item)=>{
     const reg = new RegExp(searchInput,'gi');
-    if(item.name.match(reg) || item.state.match(reg)) 
-    return item;
-   
+    if(item.name.match(reg) || item.state.match(reg)) {
+      return item;
+    }else {
+      return null
+     }
+    
  })
 // to display more content of list item when clickied when user searches choice
 
@@ -50,17 +54,20 @@ const DisplayLi = (getID)=>{
   setfindSearch(false)
   setisclicked(true)
     let getsearchItem = Data.find((item)=>{
-         if(getID === item.id){
+        if(getID === item.id){
           return item
+         }else {
+          return null
          }
     });
     setsearchInput("");
     setbuyplan(getsearchItem)
 }
-
-
 const userChoice = [buyplan]
-console.log(userChoice)
+const parentCart = useContext(CartContext);
+// console.log(parentCart.cartitem)
+
+
 
   return (
     <main className='more'>
@@ -100,7 +107,7 @@ console.log(userChoice)
                 return (
                     <div className='proceed'>
                             <h3 key={item.id}>you will be buying this plan for {item.price}</h3>
-                          <Button variant="contained" color="primary" size="small" >Proceed to buy plan</Button>
+                          <Button variant="contained" color="primary" size="small" onClick={()=>{parentCart.onAdd(item)}}>Proceed to buy plan</Button>
                          
                     </div>
                 )

@@ -5,7 +5,6 @@ import './style.css'
 import { useState } from 'react';
 import { BiChevronDown } from 'react-icons/bi';
 import {AiOutlineShoppingCart} from 'react-icons/ai'
-// import { Link} from 'react-scroll/modules';
 import { Link} from "react-router-dom";
 import {HashLink } from "react-router-hash-link"
 
@@ -14,94 +13,65 @@ const menuitems = [
     {
         id: 1,
         text: 'Our health plan',
-        icon: <BiChevronDown />
+        icon: <BiChevronDown />,
+        title: 'FAQ',
+        phone: '09157795096',
+        call: '08148714389',
+        mail: 'hellolizzy@gmail.com'
+
+
+        
+        
     },
     {
         id: 2,
         text: 'Support',
-        icon: <BiChevronDown />
+        icon: <BiChevronDown />,
+        phone:'Your available hospitals',
+        call: 'Your benefit list',
+        mail: 'Download your care app'
+
     },
     {
         id: 3,
         text: 'Resources',
         icon: <BiChevronDown />,
-        path: '/'
+        phone: 'For You and Your Family',
+        call: 'For Your Parents',
+        mail: 'Download your care app'
     }    
 
 ]
 export const Navbar = () => {
-    //drop down burger for small screen
-    const [dropdown, setDropdown] = useState(true);
-    const HandleClick = (elId) => {
-        setDropdown(!dropdown)
-       
-    }
-  
-// const navigate = useNavigate()
+    
+
 
 
     //list dropdown event code
-    const [contactDropdown, setcontactDropdown] = useState(true);
-    const [listDropdown, setlistDropdown] = useState(true);
-    const [listDropdown3, setlistDropdown3] = useState(true);
-
-const drpdownHideWhenmouseEnter = (elId)=>{
-    if(elId === 2){
-        setcontactDropdown(false)
-        
-   }
-   if(elId === 3){
-    setlistDropdown(false)
-     
-}
-if(elId === 1){
-    setlistDropdown3(false)
-     
-}
-}
-
-const listMouseLeave = (elId)=>{
-    if(elId === 2){
-        setcontactDropdown(true);
-        
-   }
-   if(elId === 3){
-    setlistDropdown(true);
-     
-}
-if(elId === 1){
-    setlistDropdown3(true);
-     
-}
-}
+    const [contactDropdown, setcontactDropdown] = useState(null);
+    const [navbarDropdown, setnavbarDropdown] = useState(true);
 
 
-
-const drpdownHideWhenmouseLeave1 = ()=>{
-    setcontactDropdown(!contactDropdown);
-    setlistDropdown(true);
-    setlistDropdown3(true);
-
+const drpdownHideWhenmouseEnter= (el)=>{
+    setcontactDropdown(el.id)
 
 }
 
-const drpdownHideWhenmouseLeave2 = ()=>{
-    setlistDropdown(!listDropdown);
-    setcontactDropdown(true);
-    setlistDropdown3(true);
-
+const listMouseLeave = (el)=>{
+setcontactDropdown(!el.id);
 }
 
+//drop down burger for small screen
 
-const drpdownHideWhenmouseLeave3 = ()=>{
-    setlistDropdown3(!listDropdown3);
-    setcontactDropdown(true);
-    setlistDropdown(true);
+const HandleClick = () => {
+    setnavbarDropdown(!navbarDropdown)
+    
    
-
 }
 
-const [isin ,setisin] = useState(true)
+
+
+
 
 
 
@@ -110,42 +80,35 @@ const [isin ,setisin] = useState(true)
             <div className='menubar'>
                 <h3>sureHealth</h3>
                 <IconButton onClick={HandleClick} className="icon" >
-                    < BiMenu />
+                    < BiMenu  id='icon'/>
                 </IconButton>
             </div>
-            <div>
-                <ul className={dropdown ? 'menulist' : 'show'} >
+            <div className={navbarDropdown ? 'hide-nav':'navb-con'}>
+                
                     {
                         menuitems.map((item) => {
                             return (
-                                   <li key={item.id}  onMouseEnter={()=>{drpdownHideWhenmouseEnter(item.id)}}>{item.text}{item.icon}</li>
+                                <ul className="menulist" key={item.id}>
+                                    <li   onMouseMove={()=>{drpdownHideWhenmouseEnter(item)}}  onMouseLeave={()=>{listMouseLeave(item)}}>{item.text}{item.icon}</li>
+                                   <ul className={contactDropdown === item.id ? 'drp-ul' :'hide-drp-ul'}  onMouseMove={()=>{drpdownHideWhenmouseEnter(item)}}  onMouseLeave={()=>{listMouseLeave(item)}}> 
+                                    <li>{item.title}</li>
+                                    <li>{item.phone}</li>
+                                    <li>{item.call}</li>
+                                    <li>{item.mail}</li>
+                                    </ul>
+                               
+                                </ul>
+                                   
                             )
                         })
                     }
                      
-                      
-                    <ul className={contactDropdown ? 'hide-drp-ul': 'drp-ul list-1'} onMouseLeave={drpdownHideWhenmouseLeave1}>
-                        <li><h4>FAQ</h4></li>
-                        <li>Call us: 09157795096</li>
-                        <li>Whatsapp: 08148714389</li>
-                        <li>Email: hellolizzy@gmail.com</li>
-                    </ul>
-                    <ul className={listDropdown ? 'hide-drp-ul': 'drp-ul list-2'} onMouseLeave={drpdownHideWhenmouseLeave2}>
-                        <li>Your available hospitals</li>
-                        <li>Your benefit list</li>
-                        <li>Download your care app</li>
-                    </ul>
-                    <ul className={listDropdown3 ? 'hide-drp-ul': 'drp-ul list-3'} onMouseLeave={drpdownHideWhenmouseLeave3}>
-                        <li>For You and Your Family</li>
-                        <li>For Your Parents</li>
-                        <li>For Your Parents</li>
-                    </ul>
-                    <Link to="/login" ><li>Login</li></Link> 
+                    <Link to="/login" className='link'><li>Login</li></Link> 
                     
-                     <HashLink smooth to="/#healthplan"><Button variant="contained" color="primary" size="small">Get started </Button></HashLink>
+                     <HashLink smooth to="/#healthplan" className='link'><Button variant="contained" color="primary" size="small">Get started </Button></HashLink>
                      
                      <AiOutlineShoppingCart />
-                    </ul>
+                   
 
             </div>
 

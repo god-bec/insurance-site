@@ -116,6 +116,10 @@
 
 
 
+
+
+
+
 @media only screen and (max-width: 600px) {
    .more{
     padding: 60px 0px 0px 0px;
@@ -157,4 +161,27 @@
         color: azure;
         
         }
+
+        .log-container{
+            flex-direction: column;
+           justify-content: center;
+           
+            
+           
+        }
+        .log-content{
+            width: 100%;
+            text-align: center;
+            line-height: 25px;
+            margin-bottom: 50px;
+            
+        }
+
+        .inputContainer{
+            width: 100%;
+            padding: 3px;
+            display: block;
+            margin: auto;
+        }
+
 }

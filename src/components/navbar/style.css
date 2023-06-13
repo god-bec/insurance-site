@@ -2,30 +2,24 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-  
-}
+   
+ }
+ 
 .container{
     color:dimgrey;
     background-color: azure ;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     font-family: 'Open Sans', sans-serif;
     padding: 10px 50px;
     border-bottom: 0.2px solid white;
     width:100%;
     position: fixed;
-    z-index: 100;
- 
+    z-index: 5000;
+    height: 70px;
    
-   
-    
-    
 }
-.menubar{
-    display:flex;
-    justify-content: space-between;
- 
-}
+
 .menubar h3{
     font-size: 45px;
     color: black;
@@ -35,22 +29,22 @@
     visibility: hidden;
 }
 .menulist{
-    display:flex;
-    gap: 40px;
+    display:block;
+    /* gap: 40px; */
     font-family: 'Open Sans', sans-serif;
     cursor: pointer;
    
-}
-/* effective on onclick stylling */
-.show{
+} 
+.navb-con{
     display:flex;
-    gap: 40px;
-    font-family: 'Open Sans', sans-serif;
+    gap: 60px;
+    padding: 10px 0px;
+   
 }
-.show li{
-    list-style-type: none;
-    cursor:pointer;
-    
+.hide-nav{
+    display:flex;
+    gap: 60px;
+    padding: 10px 0px;
 }
 .menulist li{
     list-style-type: none;
@@ -61,6 +55,10 @@
     color: navy;
     
 }
+/* effective on omouse Enter */
+ .hide-drp-ul{
+    display:none;
+}
 
 .drp-ul{
     border:2px solid darkslateblue;
@@ -68,9 +66,6 @@
     padding: 5px 10px; 
     position: absolute;
     background-color: azure;
-    top:30px;
-    left: 60%;
-    
    }
    .list-1{
     top:50px;
@@ -91,160 +86,62 @@
    .link {
     cursor: pointer;
     text-decoration: none;
-   }
-/*second list drp down*/
-   .list-2{
-    top:50px;
-    left: 70%;
-    
-   }
-   .list-3{
-    top:50px;
-    left: 50%;
-    
-   }
-   .hide-drp-ul{
-    display: none;
-   }
-   
+    list-style-type: none;
+   } 
 
-   
+   .container Link{
+    list-style-type: none;
+    text-decoration: none;
+   }
 
 
 
 
 @media only screen and (max-width: 600px) {
-    .container{
-        flex-direction: column;
+     .container{
+        /* flex-direction: column; */
         padding: 10px 20px;
-        position: fixed;
+      display: block;
         width: 100%;
         z-index: 1111;
     }
+
+    .navb-con{
+        flex-direction: column;
+        gap: 30px;
+        padding: 50px 0px; 
+        border: solid navy; 
+        border-radius: 5px;
+        z-index: 1111;
+        background-color: azure;
+        width: 70%;
+    }
+
+    
     .icon{
         visibility: visible;
-    } 
-    .menulist{
-        display:none;
-        gap: 40px;
-        font-family: 'Open Sans', sans-serif;
-    }
-     .show{
-        display:block;
         
-     }
-     .show li{
-            padding: 10px 0px;
-            list-style-type: none;
-     }
-     .show li:hover{
-        background-color: darkslateblue;
-        color: white;
-        padding: 10px 0px;
-        transition: .3s ease-in;
- }
- .show li:active{
-    background-color: darkslateblue;
-    color: white;
-    padding: 10px 0px;
-}
-     .menubar h3{
-        font-size: 35px;
-        color: black;
-        font-family: 'Dancing Script', cursive;
-    }
-   
-
-
-    .drp-ul{
-        border:2px solid darkslateblue;
-        border-radius: 5px;
-        padding: 5px 5px; 
-        position: absolute;
-        background-color: azure;
-        top:50px;
-        left: 40%;
-        width: auto; 
-       }
-    /*second list drp down*/
-       
-      
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-/* .menubar h3{
-        display:flex;
-        font-size: 25px;
-        color: black;
+    } 
+    #icon{
+        font-size: 50px;
     }
     .menubar{
-        flex-direction: row-reverse;
+        display: flex;
+        justify-content: space-between;
     }
-   
-    .icon{
-        visibility: visible;
-    } 
-    .menulist{
-       display: flex;
-        gap: 20px;
-        font-family: 'Open Sans', sans-serif;
+    .hide-nav{
         display: none;
     }
-    .show{ 
-        display: block;
-    }
-    .menulist li{
-        line-height: 20px;
-        font-family: 'Open Sans', sans-serif;
-    }
-    .menulist li:hover{
-        background-color: navy;
-        color: white;
-        padding: 40px 0px;
-        font-family: 'Open Sans', sans-serif;
-    } */
- 
-   
-    /* .drp-ul li:hover{
-        color: darkslateblue;
-       }
-      
-   
-   .link   {
-    font-size: 20px;
-    padding: 20px 10px;
-    cursor: pointer;
-   }
-   .li-link{
-    display: flex;
-   }
-   .link:hover  {
-     color: azure;
-     background-color: darkslateblue;
-     cursor: pointer;
-   }
-   .drp-ul li{
-    list-style-type: none;
-    line-height: 40px;
-    font-weight: 700;
     
-   }
-   .drp-ul {
-    display: none;
-   } */
-  
+
+
+
+
+
+
+}
+
+
+
+
+

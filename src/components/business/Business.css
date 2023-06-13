@@ -110,3 +110,21 @@
 }
 
   
+
+@media only screen and (max-width : 680px){
+  .FormBus{
+   margin-top: 50px;
+}
+.busForm {
+flex-direction:column;
+
+}
+.partA{
+  width: 100%;
+  padding: 30px;
+}
+
+
+
+}
+

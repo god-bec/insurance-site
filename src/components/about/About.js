@@ -79,10 +79,10 @@ export const About = () => {
                 >
                     {
                         comments.map((info) => {
-                            return <SwiperSlide >
+                            return <SwiperSlide key={info.id}>
                                
                                     
-                                    <div className='comment-content' key={info.id}>
+                                    <div className='comment-content' >
                                         <p>{info.content}</p>
                                         <h3>{info.name}</h3>
                                     </div>

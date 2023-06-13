@@ -15,7 +15,7 @@ export const Family = () => {
     <main className='more'>
       <Intro heading="Affordable Health Insurance For Individuals & Families" text="Pay zero naira everytime you need to see a primary care doctor" button="Buy now" link="buy"/>
       
-             <div  className="filterimg">
+             <div  className="filter-img">
               <img src={family} alt="famImg"/>
              </div>
          

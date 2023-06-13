@@ -4,81 +4,22 @@ import { Button, ButtonGroup } from '@material-ui/core'
 import './Details.css'
 import { bookplan } from '../data/Data'
 import { anualplan} from '../data/Data'
-
+// import { CartContext } from '../../cartContex/CartContext'
+// import { useContext } from 'react'
 
 export const Details = () => {
-    
-    
-const monthinput = useRef();
-const anualiput = useRef();
+//     const [getmonthvalue, setgetmonthvalue] = useState(null);
+// const [getanualvalue, setgetanualvalue] = useState(null);
+const monthinput = useRef(null);
+const anualinput = useRef(null);
 
 
-// const [Qty,setQty] = useState("");
-const [Qty2,setQty2] = useState();
-const [monthlyplanCart,setmonthlyplanCart] = useState([]);
-const [anualplanCart, setanualplanCart] = useState([]);
-
-
-// const handleChange = (id)=>{
-//  if (bookplan.some((item)=>{
-//     return item.id === id
-//  })){
-//     const inputValue = monthinput.current.value
-//     setQty(inputValue);
-//     console.log(Qty); 
-//  };
-  
- 
-// }
-
-const handleChange2 = (id)=>{
-    if (anualplan.find((item)=>{
-       return item.id === id;
-    })){
-       setQty2(anualiput.current.value);
-
-    };   
-   
-   }
-
-
-   // addto cart
-const handleClick = (id)=>{
-  const exist= monthlyplanCart.find((item)=>{
-    return item.id === id
-   });
-
-if(exist){
-    console.log('already here')
-}else{
-   let pickItem =  bookplan.find((item)=>{
-        return item.id === id
-       });
-  
-       setmonthlyplanCart([{...pickItem,'qty':"monthinput.current.value" }])   
-      
-}
+const handleChange = (el)=>{
+//  setgetmonthvalue(el)
 
 }
-  
- console.log(monthlyplanCart)
-const handleClick2 = (id)=>{
-const find = anualplanCart.find((item)=>{
-    return item.id === id;
-})
 
-if(find){
-    console.log('yes found ya!!!')
-}else{
-    const finditem = anualplan.find((item)=>{
-        return item.id === id;
-    })
 
-    setanualplanCart([{...finditem,'qty': Qty2}])
-   
-}
-anualiput.current.value = " "
-}
 
 
 //Plans to display when clicked  
@@ -93,6 +34,11 @@ const monthlyPlan = ()=>{
     setAnual(false);
    
 }
+
+// const monthCart = useContext(CartContext)
+
+
+
 
     return (
 
@@ -112,7 +58,7 @@ const monthlyPlan = ()=>{
                  Monthly
                 </Button>
                   <Button
-                color="white"
+                color="primary"
                 size="large"
                 variant="contained"
                 onClick={anualPlan}
@@ -132,10 +78,15 @@ const monthlyPlan = ()=>{
                                 <h4>{plan.person}</h4>
                             </div>
                             <form className='form'>
-                                <input type='text' placeholder="howmany people do you want to buy for" key={plan.id}  ref={monthinput} /><br/> <br/>
-                                <Link to='' className='details-link'>
-                                <Button variant="contained" color="primary" size="large" onClick={()=>{handleClick(plan.id)}}>{plan.buy}</Button>
-                                </Link>
+                                <input type='number' name='num' placeholder="howmany people do you want to buy for" key={plan.id}  ref={monthinput} onChange={handleChange}/><br/> <br/>
+                               
+                                <Button 
+                                variant="contained" color="primary" size="large" 
+                                onClick={()=>{
+                                    
+                                }}
+                                >{plan.buy}</Button>
+                              
                               
                             </form>
                             <div className='details-writup' >
@@ -169,9 +120,13 @@ const monthlyPlan = ()=>{
                                 <h4>{plan.person}</h4>
                             </div>
                             <form className='form'>
-                                <input type='text' placeholder="howmany people do you want to buy for" key={plan.id} ref={anualiput} onChange={()=>{handleChange2(plan.id)}}/><br/> <br/>
+                                <input type='number' placeholder="howmany people do you want to buy for" key={plan.id}  ref={anualinput} /><br/> <br/>
                                 <Link to='' className='details-link'>
-                                <Button variant="contained" color="primary" size="large" onClick={()=>{handleClick2(plan.id)}}>{plan.buy}</Button>
+                                <Button 
+                                variant="contained" color="primary" size="large" 
+                                onClick={()=>{
+                                
+                                }}>{plan.buy}</Button>
                                 </Link>
                               
                             </form>

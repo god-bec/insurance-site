@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 const Cart = () => {
    
-const cart = useContext(CartContext)
+const cart = useContext(CartContext);
 
 //to get sub quantity of product
 const cartBasket = cart.cartitem.reduce((sum,item)=>{
@@ -29,7 +29,7 @@ const total= cart.cartitem.reduce((sum,item)=>{
         </div>
           {/* // when cart is empty */}
          {
-     cart.cartitem.length === 0 && <div className='cart-container'>
+     (cart.cartitem.length === 0  && cart.cartitem.length === 0) && <div className='cart-container'>
     <div className='cart'>
         <h5>Cart is empty</h5>
          <div className='add-minus-div'>
@@ -65,6 +65,32 @@ const price = item.price * item.qty;
             )
 })
  }
+{/* when montly family cart shows purshase to be made  */}
+ {cart.Famcartitem1.map((item) => {
+const price = item.price * item.qty;
+    return (
+        <main className='cart-container'>
+                
+             <div className='cart'>
+                        <div>
+                        <h5>{item.plan}</h5>
+                     <h5>Unit Price:N{item.price}</h5>
+                       </div>
+                     
+          
+                    <div className='add-minus-div'>
+                        <button onClick={()=>{cart.onAdd(item)}}>+</button><input type="number" value={item.qty}/><button onClick={()=>{cart.onDelete(item)}}>-</button>
+                    </div>
+                     <h2>{price}</h2>
+              </div>     
+        </main>
+
+            )
+})
+ }
+ 
+
+
  {/* //when cart is not empty to get total payable amount */}
         {
             cart.cartitem.length !== 0 && 

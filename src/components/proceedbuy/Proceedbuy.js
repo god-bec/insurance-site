@@ -32,7 +32,7 @@ export const Proceedbuy = (props) => {
                 return (
                     <div className='proceed'>
                             <h3 key={item.id}>you will be buying this plan for {item.price}</h3>
-                          <HashLink to="#proceedtobuy"><Button variant="contained" color="primary" size="small" onClick={()=>{cart.onAdd(item)}} >Proceed to buy plan</Button> </HashLink> 
+                        <Button variant="contained" color="primary" size="small" onClick={()=>{cart.onAdd(item)}} >Proceed to buy plan</Button> 
                          
                     </div>
                 )
